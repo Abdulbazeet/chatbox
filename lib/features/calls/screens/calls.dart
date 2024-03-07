@@ -93,16 +93,18 @@ class _CallsPageState extends State<CallsPage> {
                   SizedBox(
                     height: 20.sp,
                   ),
-                  ListView.builder(
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        margin: EdgeInsets.only(
-                          top: 10.sp,
-                        ),
-                        child: SLiddable2(),
-                      );
-                    },
+                  Expanded(
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: EdgeInsets.only(
+                            top: 10.sp,
+                          ),
+                          child: SLiddable2(),
+                        );
+                      },
+                    ),
                   )
                 ],
               ),

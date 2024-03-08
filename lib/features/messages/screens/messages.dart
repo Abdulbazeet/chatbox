@@ -151,35 +151,37 @@ class _MessageScreenState extends State<MessageScreen> {
               SizedBox(
                 height: 20.sp,
               ),
-              Container(
-                width: 100.w,
-                height: 394.8.sp,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(
-                      25.sp,
-                    ),
-                    topRight: Radius.circular(
-                      25.sp,
+              Expanded(
+                child: Container(
+                  width: 100.w,
+                  height: 394.8.sp,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(
+                        25.sp,
+                      ),
+                      topRight: Radius.circular(
+                        25.sp,
+                      ),
                     ),
                   ),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10.sp,
-                  ).copyWith(
-                    top: 15.sp,
-                  ),
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) {
-                      return Container(
-                          margin: EdgeInsets.only(
-                            top: 15.sp,
-                          ),
-                          child: Sliddable());
-                    },
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 10.sp,
+                    ).copyWith(
+                      top: 15.sp,
+                    ),
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) {
+                        return Container(
+                            margin: EdgeInsets.only(
+                              top: 15.sp,
+                            ),
+                            child: Sliddable());
+                      },
+                    ),
                   ),
                 ),
               )

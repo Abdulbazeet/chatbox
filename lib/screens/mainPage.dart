@@ -81,7 +81,7 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
           const BottomNavigationBarItem(
-            label: 'Contacts',
+            label: 'Settings',
             activeIcon: Icon(
               Icons.settings,
               color: Colors.green,

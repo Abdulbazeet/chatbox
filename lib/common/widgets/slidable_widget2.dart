@@ -16,32 +16,42 @@ class SLiddable2 extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        subtitle: Text(
-          'How are you doing today?',
-          style: TextStyle(
-            fontSize: 8.sp,
-            color: Colors.black,
-          ),
-        ),
-        trailing: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(
-                '2 mins ago',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 8.sp,
-                ),
+        subtitle: Row(
+          children: [
+            Icon(
+              Icons.phone_callback_outlined,
+              color: Colors.green,
+              size: 10.sp,
+            ),
+            SizedBox(
+              width: 4.sp,
+            ),
+            Text(
+              'Today, 09:20AM',
+              style: TextStyle(
+                fontSize: 8.sp,
               ),
-              Text(
-                '2',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 8.sp,
-                ),
-              )
-            ]),
+            ),
+          ],
+        ),
+        trailing: SizedBox(
+          width: 70.sp,
+          child: Row(children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.phone_in_talk_outlined,
+                color: Colors.grey,
+              ),
+            ),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.videocam_rounded,
+                  color: Colors.grey,
+                ))
+          ]),
+        ),
         leading: CircleAvatar(
           radius: 25.sp,
         ),

@@ -58,55 +58,59 @@ class _CallsPageState extends State<CallsPage> {
             SizedBox(
               height: 20.sp,
             ),
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: 10.sp,
-              ),
-              height: 494.8.sp,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(
-                    25.sp,
-                  ),
-                  topRight: Radius.circular(
-                    25.sp,
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10.sp,
+                ).copyWith(
+                  right: 0.sp,
+                ),
+                height: 494.8.sp,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(
+                      25.sp,
+                    ),
+                    topRight: Radius.circular(
+                      25.sp,
+                    ),
                   ),
                 ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: 20.sp,
-                  ),
-                  Text(
-                    'Recent',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 10.sp,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 20.sp,
                     ),
-                  ),
-                  SizedBox(
-                    height: 20.sp,
-                  ),
-                  Expanded(
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      itemBuilder: (context, index) {
-                        return Container(
-                          margin: EdgeInsets.only(
-                            top: 10.sp,
-                          ),
-                          child: SLiddable2(),
-                        );
-                      },
+                    Text(
+                      'Recent',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 10.sp,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  )
-                ],
+                    SizedBox(
+                      height: 20.sp,
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: EdgeInsets.only(
+                              top: 10.sp,
+                            ),
+                            child: SLiddable2(),
+                          );
+                        },
+                      ),
+                    )
+                  ],
+                ),
               ),
             )
           ],

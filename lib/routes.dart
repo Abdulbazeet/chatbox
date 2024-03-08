@@ -1,6 +1,7 @@
 import 'package:chatbox/features/auth/screens/authScreen.dart';
 import 'package:chatbox/features/auth/screens/logInSreen.dart';
 import 'package:chatbox/features/auth/screens/signUp.dart';
+import 'package:chatbox/features/chatSCreen/screens/chatSCreen.dart';
 import 'package:chatbox/screens/mainPage.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case MainPage.routeName:
       return MaterialPageRoute(
         builder: (context) => const MainPage(),
+      );
+    case ChatSCreen.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const ChatSCreen(),
       );
 
     default:

@@ -1,4 +1,5 @@
 import 'package:chatbox/common/widgets/slidable_widget.dart';
+import 'package:chatbox/features/chatSCreen/screens/chatSCreen.dart';
 import 'package:flutter/material.dart';
 import 'package:status_view/status_view.dart';
 import 'package:sizer/sizer.dart';
@@ -47,15 +48,14 @@ class _MessageScreenState extends State<MessageScreen> {
                       fontWeight: FontWeight.bold),
                 ),
               ),
-                ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  shape:
-                      const CircleBorder(side: BorderSide(color: Colors.white)),
-                ),
-                onPressed: () {},
-                child: SizedBox.shrink()
-              ),
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    shape: const CircleBorder(
+                        side: BorderSide(color: Colors.white)),
+                  ),
+                  onPressed: () {},
+                  child: SizedBox.shrink()),
             ],
           ),
         ),
@@ -179,7 +179,12 @@ class _MessageScreenState extends State<MessageScreen> {
                             margin: EdgeInsets.only(
                               top: 15.sp,
                             ),
-                            child: Sliddable());
+                            child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, ChatSCreen.routeName);
+                                },
+                                child: Sliddable()));
                       },
                     ),
                   ),
